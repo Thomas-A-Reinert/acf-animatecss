@@ -96,18 +96,18 @@ class acf_field_animate_parameters extends acf_field {
 										'slideInUp' => 'slideInUp'
 								),
 				'delay'	=>	array(
-											0	=>	0,
-											1	=>	1,
-											2	=>	2,
-											3	=>	3,
-											4	=>	4,
-											5	=>	5,
+											0	=>	'0',
+											1	=>	'1',
+											2	=>	'2',
+											3	=>	'3',
+											4	=>	'4',
+											5	=>	'5',
 										),
 				'animation_speed_values'	=>	array(
-																'slower'	=>	'Slowest (3s)',
-																'slow'		=>	'Slow (2s)',
-																'fast'		=>	'Fast (800ms)',
-																'faster'	=>	'Fastest (500ms)',
+																'Slowest (3s)'		=>	'slower',
+																'Slow (2s)'				=>	'slow',
+																'Fast (800ms)'		=>	'fast',
+																'Fastest (500ms)'	=>	'faster',
 															),
 		);
 		
@@ -316,7 +316,7 @@ class acf_field_animate_parameters extends acf_field {
 			$e.= '<div class="acf-input-wrap">';
 			$e.= '<select name="' . $field['name'] . '[animate_start_delay]" class="js-select2">';
 				foreach ( $field['delay'] as $k => $v ) {
-					$e.= '<option value="' . $k . '"' . selected($k, false) . ' >' . $k . '</option>' ;
+					$e.= '<option value="' . $k . '"' . selected($field_value['animate_start_delay'], $k, false) . ' >' . $k . '</option>' ;
 				}
 			$e.= '</select>';	
 			$e.= '</div></div>';
@@ -327,7 +327,7 @@ class acf_field_animate_parameters extends acf_field {
 			$e.= '<div class="acf-input-wrap">';
 			$e.= '<select name="' . $field['name'] . '[animation_speed]" class="js-select2">';
 				foreach ( $field['animation_speed_values'] as $k => $v ) {
-					$e.= '<option value="' . $k . '"' . selected($k, false) . ' >' . $k . '</option>' ;
+					$e.= '<option value="' . $k . '"' . selected($field_value['animation_speed'], $k, false) . ' >' . $k . '</option>' ;
 				}
 			$e.= '</select>';	
 			$e.= '</div></div>';
