@@ -6,7 +6,7 @@ Tags: acf, animatecss, parameters
 
 Requires at least: 3.9
 
-Tested up to: 5.2.2
+Tested: WordPress 5.2.2 and ACF 5.8.2
 
 Stable tag: trunk
 
