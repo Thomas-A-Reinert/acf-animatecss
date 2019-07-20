@@ -1,4 +1,4 @@
-=== ACF: Animate.css Effects Field ===
+# ACF: Animate.css Effects Field
 
 Contributors: Thomas A. Reinert, TAR MediaDesign
 
@@ -18,26 +18,18 @@ Forked from: https://github.com/reyhoun/acf-animate-parameter
 
 == Description ==
 
-ACF field to catch settings for Animate.css settings like effect to use, animation speed and start delay.
+ACF field to catch settings for Animate.css like effect to use, animation speed and start delay.
 
-= Compatibility =
+For Animate.css options see https://github.com/Thomas-A-Reinert/acf-animatecss and https://github.com/daneden/animate.css
 
-This ACF field type is compatible with:
-* ACF 5
-
-
-# ACF Animate Parameters Field
-
-Get Animation Parameters from user.
-
-### Compatibility
+## Compatibility
 
 This ACF field type is compatible with:
-* ACF 5
+* ACF 5 (Tested with 5.8.2)
 
-### Installation
+## Installation
 
 1. Copy the `acf-animatecss` folder into your `wp-content/plugins` folder
-2. Activate the Animate Parameters plugin via the plugins admin page
+2. Activate the `ACF: Animate.css Effects Field` plugin via the plugins admin page
 3. Create a new field via ACF and select the Animate Parameters type
 4. Please refer to the description for more info regarding the field type settings

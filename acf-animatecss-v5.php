@@ -22,7 +22,7 @@ class acf_field_animate_parameters extends acf_field {
 		*  name (string) Single word, no spaces. Underscores allowed
 		*/
 		
-		$this->name = 'animate_parameters';
+		$this->name = 'acf_animatecss';
 		
 		
 		/*
@@ -44,7 +44,6 @@ class acf_field_animate_parameters extends acf_field {
 		*/
 		
 		$this->defaults = array(
-			'font_size'		=> 14,
 			'effect_name'	=> '',
 			'enable_effect'	=> 1,
 			'select_animate_type'	=> 1,
@@ -52,8 +51,6 @@ class acf_field_animate_parameters extends acf_field {
 			'select_animate_type_2'	=> 'none',
 			'select_animate_type_3'	=> 'none',
 			'select_animate_type_4'	=> 'none',
-			'animate_delay_time'	=> 10,
-			'increase_delay'		=> 10,
 			'list_values'			=> array(
 										'none' => '-none-',
 										'bounce' => 'bounce',
@@ -106,7 +103,7 @@ class acf_field_animate_parameters extends acf_field {
 											4	=>	4,
 											5	=>	5,
 										),
-				'animation_speed'	=>	array(
+				'animation_speed_values'	=>	array(
 																'slower'	=>	'Slowest (3s)',
 																'slow'		=>	'Slow (2s)',
 																'fast'		=>	'Fast (800ms)',
@@ -123,7 +120,6 @@ class acf_field_animate_parameters extends acf_field {
 		$this->l10n = array(
 			'error'	=> __('Error! Please enter a higher value', 'acf-animatecss'),
 		);
-		
 				
 		// do not delete!
     	parent::__construct();
@@ -162,9 +158,9 @@ class acf_field_animate_parameters extends acf_field {
 			'name'			=> 'enable_effect',
 			'layout'  		=>  'horizontal',
 			'choices' =>  array(
-                1 => __('Yes', 'acf-animatecss'),
-                0 => __('No', 'acf-animatecss'),
-            )
+											1 => __('Yes', 'acf-animatecss'),
+											0 => __('No', 'acf-animatecss'),
+										)
 		));
 
 		acf_render_field_setting( $field, array(
@@ -204,7 +200,7 @@ class acf_field_animate_parameters extends acf_field {
 		));
 
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Select Animate Type','acf-animatecss'),
+			'label'			=> __('Select Animate.css Type','acf-animatecss'),
 			'instructions'	=> __('Select number of animate select type to show user.','acf-animatecss'),
 			'type'			=> 'select',
 			'ui'			=> 1,
@@ -218,7 +214,7 @@ class acf_field_animate_parameters extends acf_field {
 		));
 
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Animate Start Delay','acf-animatecss'),
+			'label'			=> __('Animate.css Start Delay','acf-animatecss'),
 			'instructions'	=> __('','acf-animatecss'),
 			'type'			=> 'select',
 			'ui'			=> 1,
@@ -316,7 +312,7 @@ class acf_field_animate_parameters extends acf_field {
 
 
 			$e.= '<div class="acf-label">';
-			$e.= '<div class="acf-input-prepend">' . __('Animate Start Delay','acf-animatecss') . '</div>';
+			$e.= '<div class="acf-input-prepend">' . __('Animate.css Start Delay','acf-animatecss') . '</div>';
 			$e.= '<div class="acf-input-wrap">';
 			$e.= '<select name="' . $field['name'] . '[animate_start_delay]" class="js-select2">';
 				foreach ( $field['delay'] as $k => $v ) {
@@ -330,7 +326,7 @@ class acf_field_animate_parameters extends acf_field {
 			$e.= '<div class="acf-input-prepend">' . __('Animation Speed','acf-animatecss') . '</div>';
 			$e.= '<div class="acf-input-wrap">';
 			$e.= '<select name="' . $field['name'] . '[animation_speed]" class="js-select2">';
-				foreach ( $field['animation_speed'] as $k => $v ) {
+				foreach ( $field['animation_speed_values'] as $k => $v ) {
 					$e.= '<option value="' . $k . '"' . selected($k, false) . ' >' . $k . '</option>' ;
 				}
 			$e.= '</select>';	

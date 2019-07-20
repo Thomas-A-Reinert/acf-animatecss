@@ -8,11 +8,9 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Forked from: https://github.com/reyhoun/acf-animate-parameter
 
-ACF field to catch settings for Animate.css settings like effect to use, animation speed and start delay.
-
 == Description ==
 
-ACF field to catch settings for Animate.css settings like effect to use, animation speed and start delay.
+ACF field to catch settings for Animate.css like effect to use, animation speed and start delay.
 
 = Compatibility =
 
