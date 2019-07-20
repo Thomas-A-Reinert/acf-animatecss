@@ -22,7 +22,7 @@ Advanced Custom Fields (ACF) field to catch settings for Animate.css like effect
 
 For Animate.css options see https://daneden.github.io/animate.css/ and https://github.com/daneden/animate.css
 
-Notice: This Addon does not enqueue Animate.css - yet. Maybe in a later version.
+**Notice:** This Addon does not enqueue Animate.css - yet. Maybe in a later version.
 
 ## Compatibility
 
