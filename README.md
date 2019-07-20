@@ -1,4 +1,4 @@
-# ACF: Animate.css Effects Field
+# Advanced Custom Fields (ACF): Animate.css Effects Field
 
 Contributors: Thomas A. Reinert, TAR MediaDesign
 
@@ -18,13 +18,16 @@ Forked from: https://github.com/reyhoun/acf-animate-parameter
 
 == Description ==
 
-ACF field to catch settings for Animate.css like effect to use, animation speed and start delay.
+Advanced Custom Fields (ACF) field to catch settings for Animate.css like effect to use, animation speed and start delay.
 
-For Animate.css options see https://github.com/Thomas-A-Reinert/acf-animatecss and https://github.com/daneden/animate.css
+For Animate.css options see https://daneden.github.io/animate.css/ and https://github.com/daneden/animate.css
+
+Notice: This Addon does not enqueue Animate.css - yet. Maybe in a later version.
 
 ## Compatibility
 
 This ACF field type is compatible with:
+* Up to WordPress 5.2.2
 * ACF 5 (Tested with 5.8.2)
 
 ## Installation
