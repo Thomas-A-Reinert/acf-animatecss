@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: ACF: Animate.css Effects\n"
-"POT-Creation-Date: 2019-07-20 08:17+0200\n"
+"POT-Creation-Date: 2019-07-20 09:21+0200\n"
 "PO-Revision-Date: 2019-07-20 08:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: acf-animate-parameters.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -25,56 +25,52 @@ msgstr ""
 msgid "Animate.css Effects"
 msgstr ""
 
-#: acf-animatecss-v5.php:121
+#: acf-animatecss-v5.php:115
 msgid "Error! Please enter a higher value"
 msgstr ""
 
-#: acf-animatecss-v5.php:156 acf-animatecss-v5.php:293
+#: acf-animatecss-v5.php:150 acf-animatecss-v5.php:239
 msgid "Enable Effect"
 msgstr ""
 
-#: acf-animatecss-v5.php:161 acf-animatecss-v5.php:295
+#: acf-animatecss-v5.php:155 acf-animatecss-v5.php:241
 msgid "Yes"
 msgstr ""
 
-#: acf-animatecss-v5.php:162 acf-animatecss-v5.php:296
+#: acf-animatecss-v5.php:156 acf-animatecss-v5.php:242
 msgid "No"
 msgstr ""
 
-#: acf-animatecss-v5.php:167
-msgid "Animate Type 1"
-msgstr ""
-
-#: acf-animatecss-v5.php:176
-msgid "Animate Type 2"
-msgstr ""
-
-#: acf-animatecss-v5.php:185
-msgid "Animate Type 3"
-msgstr ""
-
-#: acf-animatecss-v5.php:194
-msgid "Animate Type 4"
-msgstr ""
-
-#: acf-animatecss-v5.php:203
+#: acf-animatecss-v5.php:161
 msgid "Select Animate.css Type"
 msgstr ""
 
-#: acf-animatecss-v5.php:204
-msgid "Select number of animate select type to show user."
-msgstr ""
-
-#: acf-animatecss-v5.php:217 acf-animatecss-v5.php:315
+#: acf-animatecss-v5.php:169 acf-animatecss-v5.php:258
 msgid "Animate.css Start Delay"
 msgstr ""
 
-#: acf-animatecss-v5.php:234 acf-animatecss-v5.php:326
+#: acf-animatecss-v5.php:185 acf-animatecss-v5.php:269
 msgid "Animation Speed"
 msgstr ""
 
-#: acf-animatecss-v5.php:303
-msgid "Animate #"
+#: acf-animatecss-v5.php:190
+msgid "Slowest (3s)"
+msgstr ""
+
+#: acf-animatecss-v5.php:191
+msgid "Slow (2s)"
+msgstr ""
+
+#: acf-animatecss-v5.php:192
+msgid "Fast (800ms)"
+msgstr ""
+
+#: acf-animatecss-v5.php:193
+msgid "Fastest (500ms)"
+msgstr ""
+
+#: acf-animatecss-v5.php:247
+msgid "Animate.css Animation"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

@@ -1,83 +1,73 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: ACF: Animate.css Effects\n"
-"POT-Creation-Date: 2019-07-20 08:17+0200\n"
-"PO-Revision-Date: 2019-07-20 08:21+0200\n"
+"POT-Creation-Date: 2019-07-20 09:22+0200\n"
+"PO-Revision-Date: 2019-07-20 09:25+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: de_DE@formal\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: acf-animate-parameters.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: de_DE@formal\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: acf-animatecss-v5.php:32
 msgid "Animate.css Effects"
-msgstr "Animate.css Effekte"
+msgstr "Animate.css Effects"
 
-#: acf-animatecss-v5.php:121
-msgid "Error! Please enter a higher value"
-msgstr "Fehler! Bitte geben Sie einen höheren Wert ein"
-
-#: acf-animatecss-v5.php:156 acf-animatecss-v5.php:293
+#: acf-animatecss-v5.php:140 acf-animatecss-v5.php:229
 msgid "Enable Effect"
-msgstr "Effekt aktivieren"
+msgstr "Effekte aktivieren"
 
-#: acf-animatecss-v5.php:161 acf-animatecss-v5.php:295
+#: acf-animatecss-v5.php:145 acf-animatecss-v5.php:231
 msgid "Yes"
 msgstr "Ja"
 
-#: acf-animatecss-v5.php:162 acf-animatecss-v5.php:296
+#: acf-animatecss-v5.php:146 acf-animatecss-v5.php:232
 msgid "No"
 msgstr "Nein"
 
-#: acf-animatecss-v5.php:167
-msgid "Animate Type 1"
-msgstr "Animate Typ 1"
-
-#: acf-animatecss-v5.php:176
-msgid "Animate Type 2"
-msgstr "Animate Typ 2"
-
-#: acf-animatecss-v5.php:185
-msgid "Animate Type 3"
-msgstr "Animate Typ 3"
-
-#: acf-animatecss-v5.php:194
-msgid "Animate Type 4"
-msgstr "Animate Typ 4"
-
-#: acf-animatecss-v5.php:203
+#: acf-animatecss-v5.php:151
 msgid "Select Animate.css Type"
-msgstr "Wählen Sie die Art der Animate.css Animation"
+msgstr "Wählen Sie den Animate.css Typ"
 
-#: acf-animatecss-v5.php:204
-msgid "Select number of animate select type to show user."
-msgstr ""
-"Wählen Sie die Anzahl der Auswahlboxen, die dem Nutzer angezeigt werden "
-"sollen."
-
-#: acf-animatecss-v5.php:217 acf-animatecss-v5.php:315
+#: acf-animatecss-v5.php:159 acf-animatecss-v5.php:248
 msgid "Animate.css Start Delay"
 msgstr "Animate.css Startverzögerung"
 
-#: acf-animatecss-v5.php:234 acf-animatecss-v5.php:326
+#: acf-animatecss-v5.php:175 acf-animatecss-v5.php:259
 msgid "Animation Speed"
 msgstr "Animationsgeschwindigkeit"
 
-#: acf-animatecss-v5.php:303
-msgid "Animate #"
-msgstr "Animate #"
+#: acf-animatecss-v5.php:180
+msgid "Slowest (3s)"
+msgstr "Langsamste (3s)"
+
+#: acf-animatecss-v5.php:181
+msgid "Slow (2s)"
+msgstr "Langsam (2s)"
+
+#: acf-animatecss-v5.php:182
+msgid "Fast (800ms)"
+msgstr "Schnell (800ms)"
+
+#: acf-animatecss-v5.php:183
+msgid "Fastest (500ms)"
+msgstr "Schnellste (500ms)"
+
+#: acf-animatecss-v5.php:237
+msgid "Animate.css Animation"
+msgstr "Animate.css Animation"
 
 #. Plugin Name of the plugin/theme
 msgid "ACF: Animate.css Effects"
@@ -92,7 +82,7 @@ msgid ""
 "ACF field to catch settings for Animate.css like effect to use, animation "
 "speed and start delay."
 msgstr ""
-"ACF Feld zum Einstellen der Effekte für Animate.CSS wie Auswahl des "
+"ACF Feld zur Einstellung der Parameter für Animate.css wie Auswahl des "
 "Effekts, Animationsgeschwindigkeit und Startverzögerung."
 
 #. Author of the plugin/theme
@@ -102,3 +92,6 @@ msgstr "Thomas A. Reinert, TAR MediaDesign"
 #. Author URI of the plugin/theme
 msgid "https://www.tarcgn.de/"
 msgstr "https://www.tarcgn.de/"
+
+#~ msgid "Error! Please enter a higher value"
+#~ msgstr "F"
