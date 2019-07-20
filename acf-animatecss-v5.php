@@ -28,29 +28,20 @@ class acf_field_animate_parameters extends acf_field {
 		/*
 		*  label (string) Multiple words, can include spaces, visible when selecting a field type
 		*/
-		
-		$this->label = __('Animate.css Effects', 'acf-animatecss');
-		
-		
+				$this->label = __('Animate.css Effects', 'acf-animatecss');
+				
 		/*
 		*  category (string) basic | content | choice | relational | jquery | layout | CUSTOM GROUP NAME
 		*/
-		
-		$this->category = 'basic';
-		
-		
+				$this->category = 'basic';
+				
 		/*
 		*  defaults (array) Array of default settings which are merged into the field object. These are used later in settings
-		*/
-		
+		*/		
 		$this->defaults = array(
 			'effect_name'	=> '',
 			'enable_effect'	=> 1,
 			'select_animate_type'	=> 1,
-			// 'select_animate_type_1'	=> 'none',
-			// 'select_animate_type_2'	=> 'none',
-			// 'select_animate_type_3'	=> 'none',
-			// 'select_animate_type_4'	=> 'none',
 			'list_values'			=> array(
 										'none' => '-none-',
 										'bounce' => 'bounce',
@@ -187,7 +178,6 @@ class acf_field_animate_parameters extends acf_field {
 	}
 
 
-
 	/*
 	*  render_field()
 	*
@@ -202,28 +192,18 @@ class acf_field_animate_parameters extends acf_field {
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
 	*/
-
 	function render_field( $field ) {
 		
 			// add empty value (allows '' to be selected)
-				if( empty($field['value']) ){
+			if( empty($field['value']) ){
 
-						$field['value']['enable_effect'] 					= $field['enable_effect'];
-						$field['value']['select_animate_type']		= $field['select_animate_type'];
-						$field['value']['animate_start_delay'] 		= $field['animate_start_delay'];
-						$field['value']['animation_speed']       	= $field['animation_speed'];
-				}
+					$field['value']['enable_effect'] 					= $field['enable_effect'];
+					$field['value']['select_animate_type']		= $field['select_animate_type'];
+					$field['value']['animate_start_delay'] 		= $field['animate_start_delay'];
+					$field['value']['animation_speed']       	= $field['animation_speed'];
+			}
 
-				$field_value = $field['value'];
-		/*
-		*  Review the data of $field.
-		*  This will show what data is available
-		*/
-		
-		// echo '<pre>';
-		// 	print_r( $field );
-		// echo '</pre>';
-		
+			$field_value = $field['value'];
 
 			$e = '<div class="acf-label">';
 			$e.= '<label class="" for="' . $field['key'] . '">' . __("Enable Effect", "acf-animate_parameters") . '</label>';
@@ -272,5 +252,4 @@ class acf_field_animate_parameters extends acf_field {
 
 // create field
 new acf_field_animate_parameters();
-
 ?>
