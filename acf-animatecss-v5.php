@@ -47,10 +47,10 @@ class acf_field_animate_parameters extends acf_field {
 			'effect_name'	=> '',
 			'enable_effect'	=> 1,
 			'select_animate_type'	=> 1,
-			'select_animate_type_1'	=> 'none',
-			'select_animate_type_2'	=> 'none',
-			'select_animate_type_3'	=> 'none',
-			'select_animate_type_4'	=> 'none',
+			// 'select_animate_type_1'	=> 'none',
+			// 'select_animate_type_2'	=> 'none',
+			// 'select_animate_type_3'	=> 'none',
+			// 'select_animate_type_4'	=> 'none',
 			'list_values'			=> array(
 										'none' => '-none-',
 										'bounce' => 'bounce',
@@ -103,24 +103,8 @@ class acf_field_animate_parameters extends acf_field {
 											4	=>	'4',
 											5	=>	'5',
 										),
-				'animation_speed_values'	=>	array(
-																'Slowest (3s)'		=>	'slower',
-																'Slow (2s)'				=>	'slow',
-																'Fast (800ms)'		=>	'fast',
-																'Fastest (500ms)'	=>	'faster',
-															),
 		);
-		
-		
-		/*
-		*  l10n (array) Array of strings that are used in JavaScript. This allows JS strings to be translated in PHP and loaded via:
-		*  var message = acf._e('animate_parameters', 'error');
-		*/
-		
-		$this->l10n = array(
-			'error'	=> __('Error! Please enter a higher value', 'acf-animatecss'),
-		);
-				
+						
 		// do not delete!
     	parent::__construct();
     	
@@ -164,58 +148,15 @@ class acf_field_animate_parameters extends acf_field {
 		));
 
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Animate Type 1','acf-animatecss'),
-			'instructions'	=> __('','acf-animatecss'),
-			'type'			=> 'select',
-			'ui'			=> 1,
-			'name'			=> 'select_animate_type_1',
-			'choices'		=> $field['list_values'],
-		));
-
-		acf_render_field_setting( $field, array(
-			'label'			=> __('Animate Type 2','acf-animatecss'),
-			'instructions'	=> __('','acf-animatecss'),
-			'type'			=> 'select',
-			'ui'			=> 1,
-			'name'			=> 'select_animate_type_2',
-			'choices'		=> $field['list_values'],
-		));
-
-		acf_render_field_setting( $field, array(
-			'label'			=> __('Animate Type 3','acf-animatecss'),
-			'instructions'	=> __('','acf-animatecss'),
-			'type'			=> 'select',
-			'ui'			=> 1,
-			'name'			=> 'select_animate_type_3',
-			'choices'		=> $field['list_values'],
-		));
-
-		acf_render_field_setting( $field, array(
-			'label'			=> __('Animate Type 4','acf-animatecss'),
-			'instructions'	=> __('','acf-animatecss'),
-			'type'			=> 'select',
-			'ui'			=> 1,
-			'name'			=> 'select_animate_type_4',
-			'choices'		=> $field['list_values'],
-		));
-
-		acf_render_field_setting( $field, array(
 			'label'			=> __('Select Animate.css Type','acf-animatecss'),
-			'instructions'	=> __('Select number of animate select type to show user.','acf-animatecss'),
 			'type'			=> 'select',
 			'ui'			=> 1,
 			'name'			=> 'select_animate_type',
-			'choices' =>  array(
-											1	=>	1,
-											2	=>	2,
-											3	=>	3,
-											4	=>	4,
-										)
+			'choices'		=> $field['list_values'],
 		));
 
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Animate.css Start Delay','acf-animatecss'),
-			'instructions'	=> __('','acf-animatecss'),
 			'type'			=> 'select',
 			'ui'			=> 1,
 			'name'			=> 'animate_start_delay',
@@ -232,23 +173,21 @@ class acf_field_animate_parameters extends acf_field {
 
 		acf_render_field_setting( $field, array(
 			'label'			=> __('Animation Speed','acf-animatecss'),
-			'instructions'	=> __('','acf-animatecss'),
 			'type'			=> 'select',
 			'ui'			=> 1,
 			'name'			=> 'animation_speed',
 			'choices' =>  array(
-											'slower'	=>	'Slowest (3s)',
-											'slow'		=>	'Slow (2s)',
-											'fast'		=>	'Fast (800ms)',
-											'faster'	=>	'Fastest (500ms)',
+											'slower'	=>	__('Slowest (3s)','acf-animatecss'),
+											'slow'		=>	__('Slow (2s)','acf-animatecss'),
+											'fast'		=>	__('Fast (800ms)','acf-animatecss'),
+											'faster'	=>	__('Fastest (500ms)','acf-animatecss'),
 										),
 			'append'		=> '',
 		));
-
 	}
-	
-	
-	
+
+
+
 	/*
 	*  render_field()
 	*
@@ -263,22 +202,19 @@ class acf_field_animate_parameters extends acf_field {
 	*  @param	$field (array) the $field being edited
 	*  @return	n/a
 	*/
-	
+
 	function render_field( $field ) {
 		
-		  // add empty value (allows '' to be selected)
-        if( empty($field['value']) ){
+			// add empty value (allows '' to be selected)
+				if( empty($field['value']) ){
 
-            $field['value']['enable_effect'] 					= $field['enable_effect'];
-            $field['value']['select_animate_type_1'] 	= $field['select_animate_type_1'];
-            $field['value']['select_animate_type_2'] 	= $field['select_animate_type_2'];
-            $field['value']['select_animate_type_3'] 	= $field['select_animate_type_3'];
-            $field['value']['select_animate_type_4'] 	= $field['select_animate_type_4'];
-            $field['value']['animate_start_delay'] 		= $field['animate_start_delay'];
-            $field['value']['animation_speed']       	= $field['animation_speed'];
-        }
+						$field['value']['enable_effect'] 					= $field['enable_effect'];
+						$field['value']['select_animate_type']		= $field['select_animate_type'];
+						$field['value']['animate_start_delay'] 		= $field['animate_start_delay'];
+						$field['value']['animation_speed']       	= $field['animation_speed'];
+				}
 
-        $field_value = $field['value'];
+				$field_value = $field['value'];
 		/*
 		*  Review the data of $field.
 		*  This will show what data is available
@@ -297,18 +233,15 @@ class acf_field_animate_parameters extends acf_field {
 			$e.= '</div></div>';
 
 
-		for ($i=1; $i <= $field['select_animate_type'] ; $i++) {
-
 			$e.= '<div class="acf-label">';
-			$e.= '<div class="acf-input-prepend">' . __("Animate #", "acf-animate_parameters") . $i . '</div>';
+			$e.= '<div class="acf-input-prepend">' . __("Animate.css Animation", "acf-animate_parameters") . $i . '</div>';
 			$e.= '<div class="acf-input-wrap">';
-			$e.= '<select name="' . $field['name'] . '[select_animate_type_'. $i . ']" class="js-select2">';
+			$e.= '<select name="' . $field['name'] . '[select_animate_type]" class="js-select2">';
 				foreach ( $field['list_values'] as $k => $v ) {
-					$e.= '<option value="' . $k . '"' . selected($field_value['select_animate_type_' . $i], $k, false) . ' >' . $k . '</option>' ;
+					$e.= '<option value="' . $k . '"' . selected($field_value['select_animate_type'], $k, false) . ' >' . $k . '</option>' ;
 				}
 			$e.= '</select>';	
 			$e.= '</div></div>';
-		}
 
 
 			$e.= '<div class="acf-label">';
@@ -334,408 +267,8 @@ class acf_field_animate_parameters extends acf_field {
 			
 			echo $e;
 	}
-	
-		
-	/*
-	*  input_admin_enqueue_scripts()
-	*
-	*  This action is called in the admin_enqueue_scripts action on the edit screen where your field is created.
-	*  Use this action to add CSS + JavaScript to assist your render_field() action.
-	*
-	*  @type	action (admin_enqueue_scripts)
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	n/a
-	*  @return	n/a
-	*/
 
-	/*
-	
-	function input_admin_enqueue_scripts() {
-		
-		$dir = plugin_dir_url( __FILE__ );
-		
-		
-		// register & include JS
-		wp_register_script( 'acf-input-animate_parameters', "{$dir}js/input.js" );
-		wp_enqueue_script('acf-input-animate_parameters');
-		
-		
-		// register & include CSS
-		wp_register_style( 'acf-input-animate_parameters', "{$dir}css/input.css" ); 
-		wp_enqueue_style('acf-input-animate_parameters');
-		
-		
-	}
-	
-	*/
-	
-	
-	/*
-	*  input_admin_head()
-	*
-	*  This action is called in the admin_head action on the edit screen where your field is created.
-	*  Use this action to add CSS and JavaScript to assist your render_field() action.
-	*
-	*  @type	action (admin_head)
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	n/a
-	*  @return	n/a
-	*/
-
-	/*
-		
-	function input_admin_head() {
-	
-		
-		
-	}
-	
-	*/
-	
-	
-	/*
-   	*  input_form_data()
-   	*
-   	*  This function is called once on the 'input' page between the head and footer
-   	*  There are 2 situations where ACF did not load during the 'acf/input_admin_enqueue_scripts' and 
-   	*  'acf/input_admin_head' actions because ACF did not know it was going to be used. These situations are
-   	*  seen on comments / user edit forms on the front end. This function will always be called, and includes
-   	*  $args that related to the current screen such as $args['post_id']
-   	*
-   	*  @type	function
-   	*  @date	6/03/2014
-   	*  @since	5.0.0
-   	*
-   	*  @param	$args (array)
-   	*  @return	n/a
-   	*/
-   	
-   	/*
-   	
-   	function input_form_data( $args ) {
-	   	
-		
-	
-   	}
-   	
-   	*/
-	
-	
-	/*
-	*  input_admin_footer()
-	*
-	*  This action is called in the admin_footer action on the edit screen where your field is created.
-	*  Use this action to add CSS and JavaScript to assist your render_field() action.
-	*
-	*  @type	action (admin_footer)
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	n/a
-	*  @return	n/a
-	*/
-
-	/*
-		
-	function input_admin_footer() {
-	
-		
-		
-	}
-	
-	*/
-	
-	
-	/*
-	*  field_group_admin_enqueue_scripts()
-	*
-	*  This action is called in the admin_enqueue_scripts action on the edit screen where your field is edited.
-	*  Use this action to add CSS + JavaScript to assist your render_field_options() action.
-	*
-	*  @type	action (admin_enqueue_scripts)
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	n/a
-	*  @return	n/a
-	*/
-
-	/*
-	
-	function field_group_admin_enqueue_scripts() {
-		
-	}
-	
-	*/
-
-	
-	/*
-	*  field_group_admin_head()
-	*
-	*  This action is called in the admin_head action on the edit screen where your field is edited.
-	*  Use this action to add CSS and JavaScript to assist your render_field_options() action.
-	*
-	*  @type	action (admin_head)
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	n/a
-	*  @return	n/a
-	*/
-
-	/*
-	
-	function field_group_admin_head() {
-	
-	}
-	
-	*/
-
-
-	/*
-	*  load_value()
-	*
-	*  This filter is applied to the $value after it is loaded from the db
-	*
-	*  @type	filter
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	$value (mixed) the value found in the database
-	*  @param	$post_id (mixed) the $post_id from which the value was loaded
-	*  @param	$field (array) the field array holding all the field options
-	*  @return	$value
-	*/
-	
-	/*
-	
-	function load_value( $value, $post_id, $field ) {
-		
-		return $value;
-		
-	}
-	
-	*/
-	
-	
-	/*
-	*  update_value()
-	*
-	*  This filter is applied to the $value before it is saved in the db
-	*
-	*  @type	filter
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	$value (mixed) the value found in the database
-	*  @param	$post_id (mixed) the $post_id from which the value was loaded
-	*  @param	$field (array) the field array holding all the field options
-	*  @return	$value
-	*/
-	
-	/*
-	
-	function update_value( $value, $post_id, $field ) {
-		
-		return $value;
-		
-	}
-	
-	*/
-	
-	
-	/*
-	*  format_value()
-	*
-	*  This filter is appied to the $value after it is loaded from the db and before it is returned to the template
-	*
-	*  @type	filter
-	*  @since	3.6
-	*  @date	23/01/13
-	*
-	*  @param	$value (mixed) the value which was loaded from the database
-	*  @param	$post_id (mixed) the $post_id from which the value was loaded
-	*  @param	$field (array) the field array holding all the field options
-	*
-	*  @return	$value (mixed) the modified value
-	*/
-		
-	/*
-	
-	function format_value( $value, $post_id, $field ) {
-		
-		// bail early if no value
-		if( empty($value) ) {
-		
-			return $value;
-			
-		}
-		
-		
-		// apply setting
-		if( $field['font_size'] > 12 ) { 
-			
-			// format the value
-			// $value = 'something';
-		
-		}
-		
-		
-		// return
-		return $value;
-	}
-	
-	*/
-	
-	
-	/*
-	*  validate_value()
-	*
-	*  This filter is used to perform validation on the value prior to saving.
-	*  All values are validated regardless of the field's required setting. This allows you to validate and return
-	*  messages to the user if the value is not correct
-	*
-	*  @type	filter
-	*  @date	11/02/2014
-	*  @since	5.0.0
-	*
-	*  @param	$valid (boolean) validation status based on the value and the field's required setting
-	*  @param	$value (mixed) the $_POST value
-	*  @param	$field (array) the field array holding all the field options
-	*  @param	$input (string) the corresponding input name for $_POST value
-	*  @return	$valid
-	*/
-	
-	/*
-	
-	function validate_value( $valid, $value, $field, $input ){
-		
-		// Basic usage
-		if( $value < $field['custom_minimum_setting'] )
-		{
-			$valid = false;
-		}
-		
-		
-		// Advanced usage
-		if( $value < $field['custom_minimum_setting'] )
-		{
-			$valid = __('The value is too little!','acf-animatecss'),
-		}
-		
-		
-		// return
-		return $valid;
-		
-	}
-	
-	*/
-	
-	
-	/*
-	*  delete_value()
-	*
-	*  This action is fired after a value has been deleted from the db.
-	*  Please note that saving a blank value is treated as an update, not a delete
-	*
-	*  @type	action
-	*  @date	6/03/2014
-	*  @since	5.0.0
-	*
-	*  @param	$post_id (mixed) the $post_id from which the value was deleted
-	*  @param	$key (string) the $meta_key which the value was deleted
-	*  @return	n/a
-	*/
-	
-	/*
-	
-	function delete_value( $post_id, $key ) {
-		
-		
-		
-	}
-	
-	*/
-	
-	
-	/*
-	*  load_field()
-	*
-	*  This filter is applied to the $field after it is loaded from the database
-	*
-	*  @type	filter
-	*  @date	23/01/2013
-	*  @since	3.6.0	
-	*
-	*  @param	$field (array) the field array holding all the field options
-	*  @return	$field
-	*/
-	
-	/*
-	
-	function load_field( $field ) {
-		
-		return $field;
-		
-	}	
-	
-	*/
-	
-	
-	/*
-	*  update_field()
-	*
-	*  This filter is applied to the $field before it is saved to the database
-	*
-	*  @type	filter
-	*  @date	23/01/2013
-	*  @since	3.6.0
-	*
-	*  @param	$field (array) the field array holding all the field options
-	*  @return	$field
-	*/
-	
-	/*
-	
-	function update_field( $field ) {
-		
-		return $field;
-		
-	}	
-	
-	*/
-	
-	
-	/*
-	*  delete_field()
-	*
-	*  This action is fired after a field is deleted from the database
-	*
-	*  @type	action
-	*  @date	11/02/2014
-	*  @since	5.0.0
-	*
-	*  @param	$field (array) the field array holding all the field options
-	*  @return	n/a
-	*/
-	
-	/*
-	
-	function delete_field( $field ) {
-		
-		
-		
-	}	
-	
-	*/
-	
-	
 }
-
 
 // create field
 new acf_field_animate_parameters();
